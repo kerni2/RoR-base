@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.0
 
 * System dependencies
 
@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Создание тестов.
+Просмотр тестов.
+Выбор теста.
+Выполнение тестов.
+Вывод результата теста.
+Публикация результатов в соцсети.
+Аутентификация: обычный пользователь.
+Аутентификация: администратор.
