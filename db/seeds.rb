@@ -14,9 +14,9 @@ python = Category.create(title: 'Python')
 ruby = Category.create(title: 'Ruby')
 web = Category.create(title: 'Web')
 
-test_ruby = Test.create(title: 'Ruby', level: 1, category_id: ruby.id)
-test_web = Test.create(title: 'Web', category_id: web.id)
-test_python = Test.create(title: 'Python', level: 1, category_id: python.id)
+test_ruby = Test.create(title: 'Ruby', level: 1, category_id: ruby.id, author_id: user1.id)
+test_web = Test.create(title: 'Web', category_id: web.id, author_id: user1.id)
+test_python = Test.create(title: 'Python', level: 1, category_id: python.id, author_id: user1.id)
 
 ruby_question1 = Question.create(body: 'В каком варианте вы получите число без пропуска строки от пользователя:', test_id: test_ruby.id)
 
