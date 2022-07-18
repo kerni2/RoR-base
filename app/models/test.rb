@@ -19,8 +19,4 @@ class Test < ApplicationRecord
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :title, uniqueness: { scope: :level }
 
-#  def self.category_name(name)
-#    Test.joins(:category).where(category: { title: name }).order(title: 'DESC').pluck('title')
-#  end
-
 end
