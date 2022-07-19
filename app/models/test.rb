@@ -9,14 +9,14 @@ class Test < ApplicationRecord
   scope :middle_test, -> { where(level: 2..4) }
   scope :hard_test, -> { where(level: 5..Float::INFINITY) }
 
-  scope :category_name, -> (name) { joins(:category).where(category: { title: name }).order(title: 'DESC') }
+  scope :category_name, -> (name) { joins(:category).where(category: { title: name }) }
+  scope :sort_title, -> { order(title: 'DESC') }
+
+  validates :title, presence: true, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def self.category_sort(name)
-    Test.category_name(name).pluck('title')
+    Test.category_name(name).sort_title.pluck('title')
   end
-
-  validates :title, presence: true
-  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :title, uniqueness: { scope: :level }
 
 end
