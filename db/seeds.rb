@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(name: 'user1', email: 'user1@mail.com', type_user: 'user')
-user2 = User.create(name: 'user2', email: 'user2@mail.com', type_user: 'user')
-user3 = User.create(name: 'user3', email: 'user3@mail.com', type_user: 'user')
+user1 = User.create(name: 'user1', email: 'user1@mail.com', group: 'user')
+user2 = User.create(name: 'user2', email: 'user2@mail.com', group: 'user')
+user3 = User.create(name: 'user3', email: 'user3@mail.com', group: 'user')
 
 python = Category.create(title: 'Python')
 ruby = Category.create(title: 'Ruby')
