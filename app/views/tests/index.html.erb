@@ -1,8 +1,19 @@
-<h3>Тесты:</h3>
-<ul>
+<h3>TESTS:</h3>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Question</th>
+    <th>ID</th>
+  </tr>
+
   <% @tests.each do |test| %>
-    <li>
-      <a href="/tests/<%= test.id %>/questions/"><%= test.title %></a>
-    </li>
+    <tr>
+      <td><a href="/tests/<%= test.id %>/questions/"><%= test.title %></a></td>
+      <td><%= test.level %></td>
+      <td><%= test.questions.each do |question| question end%></td>
+      <td><a href="/tests/<%= test.id %>"><%= test.id %></a></td>
+    </tr>
   <% end %>
 </ul>
+</table>
