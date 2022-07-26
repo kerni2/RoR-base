@@ -1,6 +1,12 @@
 <h3>Тест: <%= @test.title %></h3>
+
+<p>
+  <%= link_to 'New question', new_test_question_path %>
+</p>
 <% @questions.each do |question| %>
   <a href="/questions/<%= question.id %>"><%= question.body %></a> 
   <a href="/questions/<%= question.id %>" data-method="delete"><b>Delete</b></a> <br/>
 <% end %>
   <br/>
+
+<%= link_to 'Back', tests_path %>
