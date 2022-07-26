@@ -14,4 +14,5 @@ module TestsHelper
   def test_count_questions(test)
     test.questions.count
   end
+
 end
