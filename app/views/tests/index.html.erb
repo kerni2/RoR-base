@@ -1,8 +1,17 @@
-<h3>Тесты:</h3>
-<ul>
-  <% @tests.each do |test| %>
-    <li>
-      <a href="/tests/<%= test.id %>/questions/"><%= test.title %></a>
-    </li>
-  <% end %>
-</ul>
+<h3>TESTS:</h3>
+
+<p>
+  <%= link_to 'New test', new_test_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Number of questions</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+<%= render @tests %>
+</table>
+
