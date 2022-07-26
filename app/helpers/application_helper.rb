@@ -4,7 +4,6 @@ module ApplicationHelper
   end
 
   def github(name, repository)
-#    "https://github.com/#{name}/#{repository}"
-    "https://github.com/"+name.to_s+"/"+repository.to_s
+    "https://github.com/#{name}/#{repository}"
   end
 end
