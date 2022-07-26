@@ -15,4 +15,11 @@ module TestsHelper
     test.questions.count
   end
 
+  def test_category(test)
+    test.category.title
+  end
+
+  def test_author(test)
+    test.author.name
+  end
 end

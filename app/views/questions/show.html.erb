@@ -1,2 +1,12 @@
-<h3><%= @question.body %></h3>
-<a href="/questions/<%= @question.id %>" data-method="delete">Delete</a><br/>
+<h3>QUESTION:</h3>
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %>
+</p>
+<p>
+  <strong>Test name:</strong>
+  <%= @question.test.title %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %>
+<%= link_to 'Back', test_path(@question.test) %>

@@ -13,7 +13,7 @@
   </p><br>
 
   <p>
-    <%= form.label :category_id %>
+    <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true  %>
   </p><br>
 
@@ -23,5 +23,5 @@
     <%= form.collection_select :author_id, User.all, :id, :name, prompt: true  %>
   </p><br>  
 
-  <%= form.submit %>
-<% end %>
+  <%= form.submit %><br>
+<% end %><br>

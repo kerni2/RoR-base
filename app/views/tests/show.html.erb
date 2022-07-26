@@ -1,19 +1,32 @@
+<h3>TEST:</h3>
 <p>
-	<strong>Title:</strong>
-	<%= @test.title %>
+  <strong>Title:</strong>
+  <%= @test.title %>
 </p>
 <p>
-	<strong>Level:</strong>
-	<%= @test.level %>
+  <strong>Level:</strong>
+  <%= test_level(@test) %>
 </p>
 <p>
-	<strong>category_id:</strong>
-	<%= @test.category_id %>
+  <strong>Category:</strong>
+  <%= test_category(@test) %>
 </p>
 <p>
-	<strong>author_id:</strong>
-	<%= @test.author_id %>
+  <strong>Author:</strong>
+  <%= test_author(@test) %>
 </p>
 
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>
+
+<h4>Test questions:</h4>
+<table>
+  <tr>
+    <th>Body</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <%= render @test.questions %>
+
+  <p><%= link_to 'New question', new_test_question_path(@test) %></p>
+</table>
