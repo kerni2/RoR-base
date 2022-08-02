@@ -1,7 +1,7 @@
 class Answer < ApplicationRecord
   belongs_to :question
 
-  scope :correct_answer, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   validates :body, presence: true
   validate :validation_count_answers
@@ -9,6 +9,6 @@ class Answer < ApplicationRecord
   private
 
   def validation_count_answers
-    errors.add(:base, 'Count answers must be less then 4') if question.answers.count > 4
+    errors.add(:base, 'Count answers must be less then 4') if question.answers.count > 3
   end
 end

@@ -54,7 +54,7 @@ python_question2_answer1 = Answer.create(body: 'isspace()', question_id: python_
 python_question2_answer2 = Answer.create(body: 'istitle()', question_id: python_question2.id)
 python_question2_answer3 = Answer.create(body: 'islower()', correct: true, question_id: python_question2.id)
 
-Progress.create(user_id: user1.id, test_id: test_ruby.id)
-Progress.create(user_id: user1.id, test_id: test_web.id)
-Progress.create(user_id: user2.id, test_id: test_web.id)
-Progress.create(user_id: user3.id, test_id: test_python.id)
+TestPassage.create(user_id: user1.id, test_id: test_ruby.id)
+TestPassage.create(user_id: user1.id, test_id: test_web.id)
+TestPassage.create(user_id: user2.id, test_id: test_web.id)
+TestPassage.create(user_id: user3.id, test_id: test_python.id)
