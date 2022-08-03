@@ -33,7 +33,7 @@ class TestPassage < ApplicationRecord
 
   def rate_of_completed_questions
     count = questions_total_number
-    count.zero? ? result = 0 : result = (correct_questions * 100 / count)
+    result = count.zero? ? 0 : (correct_questions * 100 / count)
   end
 
   private
