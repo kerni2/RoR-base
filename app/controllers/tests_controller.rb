@@ -1,6 +1,9 @@
 class TestsController < ApplicationController
+
+  before_action :authenticate_user!
   before_action :find_test, only: %i[edit show update destroy start]
-  before_action :find_user, only: %i[ start ]
+
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_test_not_found
 
   def index
     @tests = Test.all
@@ -44,8 +47,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   private
@@ -58,7 +61,7 @@ class TestsController < ApplicationController
     @test = Test.find(params[:id])
   end
 
-  def find_user
-    @user = User.first
+  def rescue_test_not_found
+    render plain: "Test not found"
   end
 end
