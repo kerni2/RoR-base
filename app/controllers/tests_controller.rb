@@ -2,7 +2,6 @@ class TestsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :find_test, only: %i[edit show update destroy start]
-  before_action :find_user, only: %i[ start ]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_test_not_found
 
@@ -60,10 +59,6 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def find_user
-    @user = User.first
   end
 
   def rescue_test_not_found
