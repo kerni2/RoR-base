@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   has_many :questions, dependent: :destroy
   has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages
-  belongs_to :author, class_name: :User, foreign_key: :author_id
+  belongs_to :author, class_name: 'User'
 
   scope :easy_test, -> { where(level: 0..1) }
   scope :middle_test, -> { where(level: 2..4) }
