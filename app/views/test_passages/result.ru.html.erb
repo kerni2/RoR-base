@@ -1,0 +1,12 @@
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+
+<p>Тест
+  <% percent = @test_passage.rate_of_completed_questions %>
+  <% if @test_passage.passage_success? %>
+    пройден <span style="color: chartreuse"><%= percent %></span>
+  <% else %>
+    не пройден <span style="color: #cc0000"><%= percent %></span>
+  <% end %>
+%</p>
+
+<%= link_to 'Назад',  tests_path %>
