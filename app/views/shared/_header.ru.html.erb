@@ -1,0 +1,13 @@
+<header>
+  <h1><%= link_to 'TestGuru', root_path %></h1>
+
+ <% if user_signed_in? %>
+      <p class="nav user">Добро пожаловать, Гуру <b><%= current_user.email %>  |</b>
+      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+      </p>
+  <% else %>
+    <%= link_to 'Регистрация', new_user_registration_path %> |
+    <%= link_to 'Войти', new_user_session_path %>
+  <% end %>
+</header>
+<hr/>

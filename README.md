@@ -1,31 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is simple TestGuru application for:
 
-Things you may want to cover:
+Creating tests.
+Viewing tests.
+Test selection.
+Running tests.
+Output of the test result.
+Publication of the results in the social network.
+Authentication: Regular user.
+Authentication: Administrator.
 
-* Ruby version: 3.0.0
+Это простое приложение TestGuru для:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-Создание тестов.
-Просмотр тестов.
-Выбор теста.
-Выполнение тестов.
-Вывод результата теста.
-Публикация результатов в соцсети.
-Аутентификация: обычный пользователь.
-Аутентификация: администратор.
+Создания тестов.
+Просмотра тестов.
+Выбора теста.
+Выполнения тестов.
+Вывода результата теста.
+Публикации результатов в соцсети.
+Аутентификации: обычный пользователь.
+Аутентификации: администратор.
