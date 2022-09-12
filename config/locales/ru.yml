@@ -52,6 +52,10 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      admin_panel: "Панель Администратора"
+      logout: "Выйти"
+      welcome: "Добро пожаловать "
 
   tests:
     index:
@@ -103,7 +107,7 @@ ru:
         edit: "Изменить Тест"
         back_test: "Назад к Тестам"
     nav:
-      title: "TestGuru Панель Администратора"
+      title: "Панель Администратора"
       logout: "Выйти"
       welcome: "Добро пожаловать"
     questions:

@@ -1,6 +1,8 @@
+<div class="row justify-content-center mt-3">
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
 <p>Question <%= @test_passage.current_question_num %> of <%= @test_passage.questions_total_number %></p>
+<div class="card border-primary">
 <b>
   <%= @test_passage.current_question.body %>
 </b>
@@ -10,6 +12,7 @@
     <%= b.check_box id: "answer_ids_#{b.object.id}" %>    <%= b.label %>
 
   <% end %>
-
+</div>
   <p><%= form.submit 'Next' %></p>
 <% end %>
+</div>
