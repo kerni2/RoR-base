@@ -1,19 +1,27 @@
-<h3><%= t('.header') %></h3>
-<p>
-  <strong><%= t('.body') %></strong>
-  <%= @question.body %>
-</p>
-<p>
-  <strong><%= t('.title') %></strong>
-  <%= @question.test.title %>
-</p>
+<div class="row justify-content-center mt-3">
 
-<h2><%= t('.answer') %></h2>
-<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
-<ol>
-<%= render @question.answers %>
-</ol>
+  <h2><%= t('.header') %></h2>
+  <p>
+    <strong><%= t('.body') %></strong>
+    <%= @question.body %>
+  </p>
+  <p>
+    <strong><%= t('.title') %></strong>
+    <%= @question.test.title %>
+  </p>
 
-<p><%= link_to t('.edit'), edit_admin_question_path(@question) %></p>
-<p><%= link_to t('.delete'), admin_question_path(@question), method: :delete, data: { confirm: t('.confirm') } %></p>
-<p><%= link_to t('.back'), admin_test_path(@question.test) %></p>
+  <h2><%= t('.answer') %></h2>
+  <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+
+  <div class="card border-primary">
+
+    <ol>
+    <%= render @question.answers %>
+    </ol>
+
+  </div>
+</div>
+
+  <p><%= link_to t('.edit'), edit_admin_question_path(@question) %></p>
+  <p><%= link_to t('.delete'), admin_question_path(@question), method: :delete, data: { confirm: t('.confirm') } %></p>
+  <p><%= link_to t('.back'), admin_test_path(@question.test) %></p>

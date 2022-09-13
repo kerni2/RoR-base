@@ -1,15 +1,20 @@
+<div class="row justify-content-center mt-3">
 <h1>Прохождение теста <%= @test_passage.test.title %></h1>
 
 <p>Вопрос <%= @test_passage.current_question_num %> из <%= @test_passage.questions_total_number %></p>
+<div class="card border-primary">
 <b>
   <%= @test_passage.current_question.body %>
 </b>
-
+<div class="form-check">
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-    <%= b.check_box id: "answer_ids_#{b.object.id}" %>    <%= b.label %>
+    <%= b.check_box id: "answer_ids_#{b.object.id}" %>    <%= b.label %> <br>
 
   <% end %>
+  </div>
+</div>
 
-  <p><%= form.submit 'Далее' %></p>
+  <p><%= form.submit 'Далее', class: 'btn btn-primary' %></p>
 <% end %>
+</div>

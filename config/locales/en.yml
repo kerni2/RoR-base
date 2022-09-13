@@ -50,6 +50,10 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      admin_panel: "Admin Panel"
+      logout: "Logout"
+      welcome: "Welcome"
 
   tests:
     index:
@@ -101,7 +105,7 @@ en:
         edit: "Edit Test"
         back_test: "Back to Test"
       nav:
-        title: "TestGuru Admin Panel"
+        title: "Admin Panel"
         logout: "Logout"
         welcome: "Welcome"
     questions:
