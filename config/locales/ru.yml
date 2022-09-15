@@ -70,6 +70,9 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    gist:
+      success: "<a href=\"%{url}\" target=\"_blank\">Gist</a> успешно добавлен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:
@@ -86,6 +89,7 @@ ru:
         number: "Число вопросов"
         actions: "Действия"
         new_test: "Новый тест"
+        gists: "Смотреть gist'ы"        
       test:
         show: "Показать"
         edit: "Изменить"
@@ -106,6 +110,8 @@ ru:
         new_question: "Новый вопрос"
         edit: "Изменить Тест"
         back_test: "Назад к Тестам"
+      destroy:
+        success: "Тест успешно удален!"
     nav:
       title: "Панель Администратора"
       logout: "Выйти"
@@ -150,7 +156,16 @@ ru:
         success: "Ответ успешно изменен!"
       destroy:
         success: "Ответ успешно удален!"
+    gists:
+      index:
+        user: "Пользователь"
+        question: "Вопрос"
+        link: "Ссылка на Gist"
+        back: "Назад к тестам"
 
   tests_mailer:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'
+  services:
+    gist_question_service:
+      title: "Вопрос из теста %{test} из TestGuru"
