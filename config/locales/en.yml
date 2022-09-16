@@ -53,7 +53,7 @@ en:
     nav:
       admin_panel: "Admin Panel"
       logout: "Logout"
-      welcome: "Welcome"
+      welcome: "Welcome "
 
   tests:
     index:
@@ -68,6 +68,9 @@ en:
   test_passages:
     result:
       header: "Test %{title} successfully finished!"
+    gist:
+      success: "<a href=\"%{url}\" target=\"_blank\">Gist</a> was successfully created!"
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:
@@ -84,6 +87,7 @@ en:
         number: "Number of questions"
         actions: "Actions"
         new_test: "New Test"
+        gists: "Show gists"  
       test:
         show: "Show"
         edit: "Edit"
@@ -104,10 +108,12 @@ en:
         new_question: "New question"
         edit: "Edit Test"
         back_test: "Back to Test"
-      nav:
-        title: "Admin Panel"
-        logout: "Logout"
-        welcome: "Welcome"
+      destroy:
+        success: "Test successfully deleted!"
+    nav:
+      title: "Admin Panel"
+      logout: "Logout"
+      welcome: "Welcome"
     questions:
       question:
         show: "Show"
@@ -148,7 +154,16 @@ en:
         success: "Answer successfully edited!"
       destroy:
         success: "Answer successfully deleted!"
+    gists:
+      index:
+        user: "User"
+        question: "Question"
+        link: "Link to Github"
+        back: "Back to Tests"
 
   tests_mailer:
     completed_test:
       subject: 'You just completed the TestGuru test!'
+  services:
+    gist_question_service:
+      title: "A question about %{test} from TestGuru"

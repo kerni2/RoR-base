@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.7'
 
  gem 'devise', '~> 4.0'
 
+ #NETWORKING
+
+ gem 'faraday'
+ gem 'octokit'
+ gem 'dotenv-rails', groups: [:development, :test]
+
  #LOCALIZATION
 
  gem 'rails-i18n', '>= 5.0.0'
