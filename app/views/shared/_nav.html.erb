@@ -1,13 +1,13 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">  
     <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
-      <% if current_user.admin? && user_signed_in? %>
-          <%= link_to t('shared.nav.admin_panel'), admin_tests_path, class: "nav-link" %>
-      <% end %>
     <span class="navbar-text">
         <% if user_signed_in? %>
           <%= t('shared.nav.welcome') %><b><%= current_user.email %></b> |
           <%= link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %>
+          <% if current_user.admin? %>
+              <%= link_to t('shared.nav.admin_panel'), admin_tests_path, class: "nav-link" %>
+          <% end %>          
         <% else %>
           <%= link_to 'Log in', new_session_path(resource_name) %> |
           <%= link_to 'Sign up', new_registration_path(resource_name) %>
