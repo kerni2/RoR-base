@@ -10,12 +10,17 @@
 
     <table class="table">
       <tr>
-        <th scope="col"><%= t('.title') %></th>
+        <th scope="col" class="sort-by-title pointer">
+          <div>
+            <%= t('.title') %>
+            <%= octicon 'sort-asc', class: 'text-success hide' %>
+            <%= octicon 'sort-desc', class: 'text-success hide' %>
+          </div>
+        </th>
         <th scope="col"><%= t('.level') %></th>
         <th scope="col"><%= t('.number') %></th>
         <th scope="col" colspan="3"><%= t('.actions') %></th>
       </tr>
-
     <%= render @tests %>
     </table>
 
