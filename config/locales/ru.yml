@@ -112,6 +112,8 @@ ru:
         back_test: "Назад к Тестам"
       destroy:
         success: "Тест успешно удален!"
+      form_inline:
+        submit: "ОК"
     nav:
       title: "Панель Администратора"
       logout: "Выйти"

@@ -36,6 +36,10 @@ class TestPassage < ApplicationRecord
     result = count.zero? ? 0 : (correct_questions * 100 / count)
   end
 
+  def current_progress
+    (current_question_num.to_f / test.questions.count * 100).round
+  end
+
   private
 
   def before_validation_set_question

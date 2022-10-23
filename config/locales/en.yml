@@ -110,6 +110,8 @@ en:
         back_test: "Back to Test"
       destroy:
         success: "Test successfully deleted!"
+      form_inline:
+        submit: "OK"
     nav:
       title: "Admin Panel"
       logout: "Logout"
