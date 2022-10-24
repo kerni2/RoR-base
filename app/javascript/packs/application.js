@@ -7,12 +7,17 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "jquery"
 import "@popperjs/core"
 import 'bootstrap'
 import './sorting'
 import './password'
-
+import './form_inline'
+import './progress_bar'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+window.jQuery = $;
+window.$ = $;
