@@ -129,6 +129,10 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.1)
     msgpack (1.5.2)
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.1.3)
+      timeout
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
@@ -223,6 +227,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.2.1)
     tilt (2.0.10)
+    timeout (0.3.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -266,6 +271,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   listen (~> 3.3)
+  net-pop
   octicons_helper
   octokit
   pg
