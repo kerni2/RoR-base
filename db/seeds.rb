@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(email: 'user1@mail.com', password: '111111')
-user2 = User.create(email: 'user2@mail.com', password: '222222')
-user3 = Admin.create(email: 'user3@mail.com', password: '333333')
+#user1 = User.create(email: 'user1@mail.com', password: '111111')
+#user2 = User.create(email: 'user2@mail.com', password: '222222')
+#user3 = Admin.create(email: 'user3@mail.com', password: '333333')
 
 python = Category.create(title: 'Python')
 ruby = Category.create(title: 'Ruby')
@@ -54,6 +54,6 @@ python_question2_answer1 = python_question2.answers.create(body: 'isspace()', qu
 python_question2_answer2 = python_question2.answers.create(body: 'istitle()', question_id: python_question2.id)
 python_question2_answer3 = python_question2.answers.create(body: 'islower()', correct: true, question_id: python_question2.id)
 
-test_ruby.users.push(user1)
-test_web.users.push(user1)
-test_python.users.push(user1)
+#test_ruby.users.push(user1)
+#test_web.users.push(user1)
+#test_python.users.push(user1)
