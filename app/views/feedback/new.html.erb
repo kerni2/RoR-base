@@ -1,0 +1,22 @@
+<div class="row justify-content-center mt-3 mx-3">
+  <div class="col col-md-6">
+
+    <h2><%= t('.title') %></h2>
+
+    <%= form_with url: feedback_index_path, local: true, method: :post do |form| %>
+
+      <div class="mb-3">
+        <%= form.label :email, t('.email'), class: 'form-label' %>
+        <%= form.email_field :email, class: 'form-control', autocomplete: "email" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :message, t('.message'), class: 'form-label' %>
+        <%= form.text_area :message, size: "70x5", class: 'form-control', autocomplete: "email" %>
+      </div>
+
+      <%= form.submit t('.button'), class: 'btn btn-primary' %>
+    <% end%>
+
+  </div>
+</div>

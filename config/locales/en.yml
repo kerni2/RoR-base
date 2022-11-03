@@ -169,3 +169,17 @@ en:
   services:
     gist_question_service:
       title: "A question about %{test} from TestGuru"
+
+  feedback:
+    create:
+      success: "Feedback was successfully send!"
+      danger: "Feedback don't send, try again!"
+    new:
+      title: "Feedback"
+      email: "Email"
+      message: "Message"
+      button: "Send"
+
+  feedback_mailer:
+    feedback_email:
+      title: "New feedback!"

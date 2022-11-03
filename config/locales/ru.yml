@@ -171,3 +171,17 @@ ru:
   services:
     gist_question_service:
       title: "Вопрос из теста %{test} из TestGuru"
+
+  feedback:
+    create:
+      success: "Отзыв успешно отправлен!"
+      danger: "Не удалось отправить отзыв, попробуйте еще раз!"
+    new:
+      title: "Отзыв"
+      email: "Электронная почта"
+      message: "Сообщение"
+      button: "Отправить"
+
+  feedback_mailer:
+    feedback_email:
+      title: "Новый отзыв!"
