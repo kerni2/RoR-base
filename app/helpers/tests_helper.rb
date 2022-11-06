@@ -22,4 +22,14 @@ module TestsHelper
   def test_author(test)
     test.author.name
   end
+
+  def test_visible(test)
+    case test.visible
+    when false
+      'No'
+    else
+      'Yes'
+    end
+  end
+
 end

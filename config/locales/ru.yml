@@ -89,12 +89,15 @@ ru:
         number: "Число вопросов"
         actions: "Действия"
         new_test: "Новый тест"
-        gists: "Смотреть gist'ы"        
+        gists: "Смотреть gist'ы" 
+        visible: "Видимый"       
       test:
         show: "Показать"
         edit: "Изменить"
         delete: "Удалить"
-        confirm: "Вы уверены?" 
+        confirm: "Вы уверены?"
+        visible: "Да"
+        notvisible: "Нет"
       edit:
         back: "Назад"
         header: "Изменить Тест %{title}"
@@ -110,10 +113,13 @@ ru:
         new_question: "Новый вопрос"
         edit: "Изменить Тест"
         back_test: "Назад к Тестам"
+        visible: "Видимый"
       destroy:
         success: "Тест успешно удален!"
       form_inline:
         submit: "ОК"
+      form:
+        visible: "Видимый"
     nav:
       title: "Панель Администратора"
       logout: "Выйти"
@@ -137,6 +143,7 @@ ru:
         delete: "Удалить"
         back: "Назад"
         confirm: "Вы уверены?"
+      alert: "Ошибка при создании вопроса"
     answers:
       answer:
         show: "Показать"
