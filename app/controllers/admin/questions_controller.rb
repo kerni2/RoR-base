@@ -22,7 +22,7 @@ class Admin::QuestionsController < Admin::BaseController
     if new_question.save
       redirect_to admin_test_path(@test)
     else
-      render plain: "Failed to create new question"
+      redirect_to admin_test_path(@test), notice: t('.alert')
     end
   end
 

@@ -87,12 +87,15 @@ en:
         number: "Number of questions"
         actions: "Actions"
         new_test: "New Test"
-        gists: "Show gists"  
+        gists: "Show gists"
+        visible: "Visible"
       test:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+        visible: "Yes"
+        notvisible: "No"
       edit:
         back: "Back"
         header: "Edit Test %{title}"
@@ -108,10 +111,13 @@ en:
         new_question: "New question"
         edit: "Edit Test"
         back_test: "Back to Test"
+        visible: "Visible"
       destroy:
         success: "Test successfully deleted!"
       form_inline:
         submit: "OK"
+      form:
+        visible: "Visible"
     nav:
       title: "Admin Panel"
       logout: "Logout"
@@ -135,6 +141,7 @@ en:
         delete: "Delete"
         back: "Back"
         confirm: "Are you sure?"
+      alert: "An error occurred while create question"
     answers:
       answer:
         show: "Show"
@@ -169,3 +176,17 @@ en:
   services:
     gist_question_service:
       title: "A question about %{test} from TestGuru"
+
+  feedback:
+    create:
+      success: "Feedback was successfully send!"
+      danger: "Feedback don't send, try again!"
+    new:
+      title: "Feedback"
+      email: "Email"
+      message: "Message"
+      button: "Send"
+
+  feedback_mailer:
+    feedback_email:
+      title: "New feedback!"

@@ -10,7 +10,7 @@
 
     <div class="card border-primary">
 
-    <table class="table md-6">
+    <table class="table table-striped md-6">
       <tr>
         <th scope="col" class="sort-by-title pointer">
           <div>
@@ -21,6 +21,7 @@
         </th>
         <th scope="col"><%= t('.level') %></th>
         <th scope="col"><%= t('.number') %></th>
+        <th scope="col"><%= t('.visible') %></th>
         <th scope="col" colspan="3"><%= t('.actions') %></th>
       </tr>
     <%= render @tests %>

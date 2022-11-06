@@ -37,7 +37,11 @@ class TestPassage < ApplicationRecord
   end
 
   def current_progress
-    (current_question_num.to_f / test.questions.count * 100).round
+    if test.questions.count == 0
+      return 0
+    else
+      (current_question_num.to_f / test.questions.count * 100).round
+    end
   end
 
   private

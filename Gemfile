@@ -5,8 +5,8 @@ ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use postgres as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -29,6 +29,10 @@ gem 'turbolinks', '~> 5'
  gem 'faraday'
  gem 'octokit'
  gem 'dotenv-rails', groups: [:development, :test]
+
+gem 'net-smtp'
+gem 'net-pop', require: false
+gem 'net-imap', require: false
 
  #LOCALIZATION
 

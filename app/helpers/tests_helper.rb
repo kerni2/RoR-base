@@ -22,4 +22,5 @@ module TestsHelper
   def test_author(test)
     test.author.name
   end
+
 end

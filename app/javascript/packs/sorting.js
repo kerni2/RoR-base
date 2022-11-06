@@ -5,10 +5,10 @@ document.addEventListener('turbolinks:load', function() {
 })
 
 function sortRowsByTitle() {
-  var table = document.querySelector('table')
+  // var table = document.querySelector('table')
   // NodeList
-
-  var rows = table.querySelectorAll('tr')
+  var tbody = document.querySelector('tbody')
+  var rows = tbody.querySelectorAll('tr')
   var sortedRows = []
 
   // select all table rows except the first one which is the header
@@ -26,8 +26,8 @@ function sortRowsByTitle() {
     this.querySelector('.octicon-sort-desc').classList.remove('hide') 
   }
 
-  var sortedTable = document.createElement('table')
-
+  // var sortedTable = document.createElement('table')
+  var sortedTable = document.createElement('tbody')
   sortedTable.classList.add('table')
   sortedTable.appendChild(rows[0])
 
@@ -35,7 +35,7 @@ function sortRowsByTitle() {
     sortedTable.appendChild(sortedRows[i])
   }
 
-  table.parentNode.replaceChild(sortedTable, table)
+  tbody.parentNode.replaceChild(sortedTable, tbody)
 }
 
 function compareRowsAsc(row1, row2) {

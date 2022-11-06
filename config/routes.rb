@@ -29,6 +29,6 @@ Rails.application.routes.draw do
       resources :gists, only: %i[index]
   end
 
-
+  resources :feedback, only: %i[new create]
 
 end
