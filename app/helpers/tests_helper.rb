@@ -1,5 +1,7 @@
 module TestsHelper
 
+  TEST_LEVELS = {1 => :easy, 2 => :middle, 3=> :hard}.freeze
+
   def test_level(test)
     case test.level
     when 0..1

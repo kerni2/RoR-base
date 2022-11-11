@@ -44,6 +44,10 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+  badges:
+    index:
+      back: "Назад"
+      header: "Мои бэйджи"
 
   shared:
     errors:
@@ -56,6 +60,7 @@ ru:
       admin_panel: "Панель Администратора"
       logout: "Выйти"
       welcome: "Добро пожаловать "
+      badges: "Бейджи"
 
   tests:
     index:
@@ -64,6 +69,7 @@ ru:
       level: "Уровень сложности"
       number: "Число вопросов"
       actions: "Действия"
+      cat: "Категория"
       button:
         start: "Начать"
 
@@ -90,7 +96,9 @@ ru:
         actions: "Действия"
         new_test: "Новый тест"
         gists: "Смотреть gist'ы" 
-        visible: "Видимый"       
+        visible: "Видимый" 
+        category: "Категория"
+        badge: "Бэйджи"      
       test:
         show: "Показать"
         edit: "Изменить"
@@ -171,6 +179,56 @@ ru:
         question: "Вопрос"
         link: "Ссылка на Gist"
         back: "Назад к тестам"
+        badges:
+      index:
+        header: "Все бэйджи"
+        new_badge_link: "Создать бейдж"
+        badge_title: "Название"
+        image: "Картинка"
+        rule: "Правило - Значение"
+        action: "Действия"
+    badges:
+      index:
+        header: "Бейджи:"
+        new_badge_link: "Создать бейдж"
+        badge_title: "Название"
+        image: "Изображение"
+        rule: "Правило выдачи"
+        action: "Действия"
+        test: "Назад к тестам"
+      badge:
+        show_link: "Показать"
+        edit_link: "Изменить"
+        delete_link: "Удалить"
+        delete_notice: "Вы уверены?"
+      show:
+        header: "Бейдж:"
+        edit_link: "Изменить"
+        delete_link: "Удалить"
+        back: "Назад к бейджам"
+        delete_notice: "Вы уверены?"
+      edit:
+        back: "Назад к бейджам"
+        header: "Редактируем бейдж:"
+      form:
+        title: "Название бэйджа"
+        img: "Путь к картинке"
+        rule: "Правило"
+        rule_value: "Уровень сложности *"
+        save: "Сохранить"
+        prompt: "Выберете правило"
+        badge: "Назад к бейджам"
+        test: "Назад к тестам"
+        rule_option: "* 1 - легкий, 2 - средний, 3 - сложный"
+      new:
+        header: "Создать бэйдж"
+        back: "Список бэйджей"
+      create:
+        success: "Бейдж успешно создан!"
+      update:
+        success: "Бейдж успешно изменен!"
+      destroy:
+        success: "Бейдж успешно удален!"
 
   tests_mailer:
     completed_test:

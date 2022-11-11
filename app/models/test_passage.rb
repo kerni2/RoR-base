@@ -7,6 +7,8 @@ class TestPassage < ApplicationRecord
 
   SUCCESS_VALUE = 85
 
+  scope :passed, -> { where(passed: true) }
+
   def completed?
     current_question.nil?
   end
@@ -42,6 +44,10 @@ class TestPassage < ApplicationRecord
     else
       (current_question_num.to_f / test.questions.count * 100).round
     end
+  end
+
+  def pass
+    update_column(:passed, true) if self.passage_success?
   end
 
   private

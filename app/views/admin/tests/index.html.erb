@@ -1,10 +1,11 @@
 <div class="row justify-content-center mt-3 mx-3">
 
-  <h2><%= t('.header') %></h2>
+  <h2 class="mb-4"><%= t('.header') %></h2>
 
-    <p>
+    <div class="mb-4">
       <%= link_to t('.new_test'), new_admin_test_path, class:"btn btn-primary" %>
-    </p>
+      <%= link_to t('.badge'), admin_badges_path, class: "btn btn-success" %>      
+    </div>
 
   <%= render 'shared/errors', resource: @test %>
 
@@ -20,6 +21,7 @@
           </div>
         </th>
         <th scope="col"><%= t('.level') %></th>
+        <th scope="col"><%= t('.category') %></th>
         <th scope="col"><%= t('.number') %></th>
         <th scope="col"><%= t('.visible') %></th>
         <th scope="col" colspan="3"><%= t('.actions') %></th>
@@ -28,4 +30,5 @@
     </table>
 
     </div>
+
 </div>
