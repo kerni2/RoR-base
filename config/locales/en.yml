@@ -169,6 +169,39 @@ en:
         question: "Question"
         link: "Link to Github"
         back: "Back to Tests"
+    badges:
+      index:
+        header: "Badges:"
+        new_badge_link: "Create badge"
+        badge_title: "Title"
+        image: "Image"
+        rule: "Rule"
+        action: "Actions"
+      badge:
+        show_link: "Show"
+        edit_link: "Edit"
+        delete_link: "Delete"
+        delete_notice: "Are you sure?"
+      show:
+        header: "Badge:"
+        edit_link: "Edit"
+        delete_link: "Delete"
+        back: "Back to badges"
+        delete_notice: "Are you sure?"
+      edit:
+        back: "Back to badges"
+        header: "Edit badge:"
+      form:
+        title: "Title"
+        img: "Image url"
+        rule: "Rule"
+        rule_value: "Rule value *"
+        save: "Save"
+        prompt: "Select rule"
+        rule_option: "* 1 - easy, 2 - middle, 3 - hard"
+      new:
+        header: "New badge"
+        back: "Back to badges"
 
   tests_mailer:
     completed_test:

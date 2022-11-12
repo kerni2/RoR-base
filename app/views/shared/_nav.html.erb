@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">  
     <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+    <%= link_to t('.badges'), badges_path, class: "btn btn-warning" %>
     <span class="navbar-text">
         <% if user_signed_in? %>
           <%= t('shared.nav.welcome') %><b><%= current_user.email %></b> |

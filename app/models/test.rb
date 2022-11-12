@@ -13,12 +13,20 @@ class Test < ApplicationRecord
   scope :sort_title, -> { order(title: 'DESC') }
 
   scope :visible, -> { where(visible: true) }
+  scope :test_on_category, -> (category) {joins(:category).where(categories: { title: category })}
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validate :level_value
 
   def self.category_sort(name)
     Test.category_name(name).sort_title.pluck('title')
+  end
+
+  private
+
+  def level_value
+    errors.add(:test, "Level must be in (1,2,3) range") unless [1,2,3].include? test.level
   end
 
 end
