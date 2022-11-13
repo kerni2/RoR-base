@@ -16,6 +16,8 @@
     <% end %>
   </div> 
 
+  <div class="timer" data-time="<%= @test_passage.test.deadline_time - @test_passage.passed_time %>"></div>
+
 <div class="card border-primary mb-4">
   
 <b>
@@ -28,7 +30,7 @@
     <% end %>
   </div>
 </div>
-  <p><%= form.submit 'Далее', class: 'btn btn-primary' %></p>
+  <p><%= form.submit 'Далее', class:"next-button" %></p>
   <p><%= link_to 'Gist Вопроса', gist_test_passage_path(@test_passage), method: :post %></p>
 </div>
 <% end %>

@@ -23,10 +23,14 @@ class Test < ApplicationRecord
     Test.category_name(name).sort_title.pluck('title')
   end
 
+  def deadline_time
+    self.timing*60
+  end
+
   private
 
   def level_value
-    errors.add(:test, "Level must be in (1,2,3) range") unless [1,2,3].include? test.level
+    errors.add(:test, "Level must be in (1,2,3) range") unless [1,2,3].include? self.level
   end
 
 end

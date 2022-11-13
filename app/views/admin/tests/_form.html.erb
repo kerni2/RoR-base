@@ -2,26 +2,32 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
 
-  <p>
+  <div class="form-group">
+  <div class="mb-3 w-25">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :test_title %>
-  </p>
+    <%= form.text_field :title, id: :test_title, class: 'form-control' %>
+  </div>
 
-  <p>
+  <div class="mb-3 w-25">
     <%= form.label :level %>
-    <%= form.number_field :level, id: :test_level %>
-  </p>
+    <%= form.number_field :level, id: :test_level, class: 'form-control'  %>
+  </div>
 
-  <p>
+   <div class="mb-3 w-25">
     <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: t('helpers.select.prompt')  %>
-  </p>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: t('helpers.select.prompt'), class: 'form-control'   %>
+  </div>
 
-  <p>
+  <div class="mb-3 w-25">
     <%= form.label :visible, t('.visible') %>
     <%= form.check_box :visible, id: :test_visible %>
-  </p> 
+  </div>
 
+  <div class="mb-3 w-25">
+    <%= form.label :timing, t('.timing') %>
+    <%= form.number_field :timing, class: 'form-control'  %>
+  </div>
+  </div>
   <%= form.submit %>
 <% end %>
 </div>

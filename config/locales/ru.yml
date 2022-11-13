@@ -72,6 +72,7 @@ ru:
       cat: "Категория"
       button:
         start: "Начать"
+      timer: "Минут на прохождение"
 
   test_passages:
     result:
@@ -98,7 +99,8 @@ ru:
         gists: "Смотреть gist'ы" 
         visible: "Видимый" 
         category: "Категория"
-        badge: "Бэйджи"      
+        badge: "Бэйджи"
+        timing: "Минут на прохождение"
       test:
         show: "Показать"
         edit: "Изменить"
@@ -115,19 +117,21 @@ ru:
       show:
         header: "Тест:"
         title: "Название:"
-        level: "Уровень сложности"
+        level: "Уровень сложности:"
         question: "Вопрос"
         actions: "Действия"
         new_question: "Новый вопрос"
         edit: "Изменить Тест"
         back_test: "Назад к Тестам"
-        visible: "Видимый"
+        visible: "Видимый:"
+        timer: "Минут на прохождение:"
       destroy:
         success: "Тест успешно удален!"
       form_inline:
         submit: "ОК"
       form:
         visible: "Видимый"
+        timing: "Минут на прохождение"
     nav:
       title: "Панель Администратора"
       logout: "Выйти"

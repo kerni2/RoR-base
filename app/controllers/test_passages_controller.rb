@@ -14,7 +14,7 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || time_expired?
       TestsMailer.completed_test(@test_passage).deliver_now
       @test_passage.pass
       BadgeService.new(@test_passage).give_badge if @test_passage.passage_success?
@@ -36,6 +36,10 @@ class TestPassagesController < ApplicationController
     end
 
     redirect_to @test_passage, flash_options
+  end
+
+  def time_expired?
+    @test_passage.passed_time < @test_passage.test.timing
   end
 
   private
