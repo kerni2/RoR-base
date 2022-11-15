@@ -8,6 +8,7 @@
   <td class="align-middle"><%= test.category.title %></td>
   <td class="align-middle"><%= test_count_questions(test) %></td>
   <td class="align-middle"><%= test.visible ? t('.visible') : t('.notvisible') %></td>
+  <td class="align-middle"><%= test.timing %> </td>
   <td class="align-middle"><%= link_to t('.show'), admin_test_path(test) %></td>
   <td class="align-middle">
     <%= link_to t('.edit'), 

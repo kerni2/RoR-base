@@ -4,6 +4,7 @@
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
   <td><%= test_count_questions(test) %></td>
+  <td><%= test.timing %></td>
   <td><%= button_to t('tests.index.button.start'), start_test_path(test), class: 'btn btn-primary' %></td> 
 </tr>
 

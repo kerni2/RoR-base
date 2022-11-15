@@ -50,6 +50,10 @@ class TestPassage < ApplicationRecord
     update_column(:passed, true) if self.passage_success?
   end
 
+  def passed_time
+    Time.now - self.created_at
+  end
+
   private
 
   def before_validation_set_question
