@@ -1,4 +1,4 @@
-# README
+TestGuru
 
 This is simple TestGuru application for:
 
